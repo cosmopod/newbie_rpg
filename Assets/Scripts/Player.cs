@@ -9,6 +9,7 @@ public class Player : Entity
 	public int money;
 
 
+
 	// Use this for initialization
 	void Start ()
 	{

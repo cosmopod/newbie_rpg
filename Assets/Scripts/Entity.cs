@@ -21,8 +21,15 @@ public class Entity : ScriptableObject
 	public Vector2 position;
 
 
+	public void takeDamage (int amount)
+	{
+		health -= Mathf.Clamp (amount - armor, 0, int.MaxValue);
+	}
 
-
+	public void attack (Entity entity)
+	{
+		entity.takeDamage (strength);
+	}
 	// Use this for initialization
 	void Start ()
 	{
